@@ -12,7 +12,8 @@ export const StatisticsStyled = styled.div`
 export const StatisticsDataStyled = styled.div`
   display: flex;
   font-size: 24px;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: baseline;
 `;
 export const StatisticsParagraphStyled = styled.p`
   border: 3px outset;
