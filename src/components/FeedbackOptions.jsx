@@ -1,8 +1,16 @@
+import PropTypes from 'prop-types';
+
+import {
+  FeedbackOptionsStyled,
+  FeedbackButtonsStyled,
+  FeedbackTitleStyled,
+} from 'components/styled/FeedbackStyled.styled';
+
 export const FeedbackOptions = ({ countTotalFeedback }) => {
   return (
-    <div>
-      <h2>Please leave Feedback</h2>
-      <div>
+    <FeedbackOptionsStyled>
+      <FeedbackTitleStyled>Please leave Feedback</FeedbackTitleStyled>
+      <FeedbackButtonsStyled>
         <button type="button" name="good" onClick={countTotalFeedback}>
           Good
         </button>
@@ -12,7 +20,10 @@ export const FeedbackOptions = ({ countTotalFeedback }) => {
         <button type="button" name="bad" onClick={countTotalFeedback}>
           Bad
         </button>
-      </div>
-    </div>
+      </FeedbackButtonsStyled>
+    </FeedbackOptionsStyled>
   );
+};
+FeedbackOptions.propTypes = {
+  countTotalFeedback: PropTypes.func.isRequired,
 };
