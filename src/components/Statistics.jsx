@@ -40,4 +40,5 @@ Statistics.propTypes = {
   bad: PropTypes.number.isRequired,
   countPositiveFeedbackPercentage: PropTypes.func.isRequired,
   total: PropTypes.number.isRequired,
+  status: PropTypes.bool.isRequired,
 };
