@@ -6,20 +6,23 @@ import {
   FeedbackTitleStyled,
 } from 'components/styled/FeedbackStyled.styled';
 
-export const FeedbackOptions = ({ countTotalFeedback }) => {
+export const FeedbackOptions = ({ countTotalFeedback, state }) => {
   return (
     <FeedbackOptionsStyled>
       <FeedbackTitleStyled>Please leave Feedback</FeedbackTitleStyled>
       <FeedbackButtonsStyled>
-        <button type="button" name="good" onClick={countTotalFeedback}>
-          Good
-        </button>
-        <button type="button" name="neutral" onClick={countTotalFeedback}>
-          Neutral
-        </button>
-        <button type="button" name="bad" onClick={countTotalFeedback}>
-          Bad
-        </button>
+        {Object.keys(state).map(el => {
+          return (
+            <button
+              key={el}
+              type="button"
+              name={el}
+              onClick={countTotalFeedback}
+            >
+              {el}
+            </button>
+          );
+        })}
       </FeedbackButtonsStyled>
     </FeedbackOptionsStyled>
   );

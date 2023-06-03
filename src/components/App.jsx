@@ -29,7 +29,10 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <FeedbackOptions countTotalFeedback={this.countTotalFeedback} />
+        <FeedbackOptions
+          countTotalFeedback={this.countTotalFeedback}
+          state={this.state}
+        />
 
         <Statistics
           good={this.state.good}
