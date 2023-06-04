@@ -12,7 +12,7 @@ export const FeedbackButtonsStyled = styled.div`
   display: flex;
   gap: 20px;
   button {
-    border: 3px outset;
+    border: 3px inset #3ae2ce;
     padding: 10px;
     font-size: 24px;
     border-radius: 10px;
@@ -20,9 +20,11 @@ export const FeedbackButtonsStyled = styled.div`
     cursor: pointer;
     :hover {
       background-color: red;
+      border: 3px outset #3ae2ce;
     }
     :active {
       background-color: green;
+      border: 3px outset #3ae2ce;
     }
   }
 `;

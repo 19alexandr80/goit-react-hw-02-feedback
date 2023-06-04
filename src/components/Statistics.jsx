@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 
-import { Notification } from 'components/Notification';
 import {
   StatisticsStyled,
   StatisticsDataStyled,
@@ -13,23 +12,18 @@ export const Statistics = ({
   bad,
   countPositiveFeedbackPercentage,
   total,
-  status,
 }) => {
   return (
     <StatisticsStyled>
-      {status ? (
-        <StatisticsDataStyled>
-          <p>Good: {good}</p>
-          <p>Neutral: {neutral}</p>
-          <p>Bad: {bad}</p>
-          <p>Total: {total}</p>
-          <StatisticsParagraphStyled count={countPositiveFeedbackPercentage()}>
-            Positive feedback: {countPositiveFeedbackPercentage()}%
-          </StatisticsParagraphStyled>
-        </StatisticsDataStyled>
-      ) : (
-        <Notification message="There is no feedback" />
-      )}
+      <StatisticsDataStyled>
+        <p>Good: {good}</p>
+        <p>Neutral: {neutral}</p>
+        <p>Bad: {bad}</p>
+        <p>Total: {total}</p>
+        <StatisticsParagraphStyled count={countPositiveFeedbackPercentage()}>
+          Positive feedback: {countPositiveFeedbackPercentage()}%
+        </StatisticsParagraphStyled>
+      </StatisticsDataStyled>
     </StatisticsStyled>
   );
 };
@@ -39,5 +33,4 @@ Statistics.propTypes = {
   bad: PropTypes.number.isRequired,
   countPositiveFeedbackPercentage: PropTypes.func.isRequired,
   total: PropTypes.number.isRequired,
-  status: PropTypes.bool.isRequired,
 };
