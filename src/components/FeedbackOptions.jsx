@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 import {
   FeedbackOptionsStyled,
   FeedbackButtonsStyled,
-  FeedbackTitleStyled,
 } from 'components/styled/FeedbackStyled.styled';
 
 export const FeedbackOptions = ({ countTotalFeedback, state }) => {
   return (
     <FeedbackOptionsStyled>
-      <FeedbackTitleStyled>Please leave Feedback</FeedbackTitleStyled>
       <FeedbackButtonsStyled>
-        {Object.keys(state).map(el => {
+        {state.map(el => {
           return (
             <button
               key={el}
@@ -29,4 +27,5 @@ export const FeedbackOptions = ({ countTotalFeedback, state }) => {
 };
 FeedbackOptions.propTypes = {
   countTotalFeedback: PropTypes.func.isRequired,
+  state: PropTypes.array.isRequired,
 };

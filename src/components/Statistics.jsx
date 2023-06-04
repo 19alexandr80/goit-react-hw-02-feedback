@@ -17,7 +17,6 @@ export const Statistics = ({
 }) => {
   return (
     <StatisticsStyled>
-      <h2>Statistics</h2>
       {status ? (
         <StatisticsDataStyled>
           <p>Good: {good}</p>

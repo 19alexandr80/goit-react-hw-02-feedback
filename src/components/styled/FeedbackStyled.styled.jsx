@@ -26,6 +26,3 @@ export const FeedbackButtonsStyled = styled.div`
     }
   }
 `;
-export const FeedbackTitleStyled = styled.h2`
-  font-size: 36px;
-`;
