@@ -19,7 +19,7 @@ export const FeedbackButtonsStyled = styled.div`
     background-color: cadetblue;
     cursor: pointer;
     :hover {
-      background-color: red;
+      background-color: #3a9a77;
       border: 3px outset #3ae2ce;
     }
     :active {
