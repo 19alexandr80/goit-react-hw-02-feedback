@@ -27,5 +27,5 @@ export const FeedbackOptions = ({ countTotalFeedback, state }) => {
 };
 FeedbackOptions.propTypes = {
   countTotalFeedback: PropTypes.func.isRequired,
-  state: PropTypes.array.isRequired,
+  state: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

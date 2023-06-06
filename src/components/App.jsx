@@ -31,11 +31,6 @@ export class App extends React.Component {
   countTotalFeedback = () => {
     return this.state.good + this.state.bad + this.state.neutral;
   };
-  statusFeedback = () => {
-    return (
-      this.state.good !== 0 || this.state.bad !== 0 || this.state.neutral !== 0
-    );
-  };
   render() {
     return (
       <div>
@@ -47,7 +42,7 @@ export class App extends React.Component {
         </Section>
 
         <Section title={'Statistics'}>
-          {this.statusFeedback() ? (
+          {this.countTotalFeedback() ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
